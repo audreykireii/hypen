@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENHYPEN - Unofficial Landing Page</title>
+    <style>
+        /* CSS Variables for a Dark/Vampire Concept Aesthetic */
+        :root {
+            --bg-black: #0d0d0d;
+            --surface-dark: #1a1a1a;
+            --accent-red: #8b0000;
+            --accent-hover: #b30000;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a0;
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5rem;
+            background-color: rgba(13, 13, 13, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bg-black)), 
+                        url('https://via.placeholder.com/1920x1080/1a1a1a/333333?text=ENHYPEN+Group+Photo') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            letter-spacing: 10px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-primary {
+            padding: 1rem 3rem;
+            background-color: var(--accent-red);
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 2px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.05);
+        }
+
+        /* Members Section */
+        .members {
+            padding: 6rem 5rem;
+            text-align: center;
+        }
+
+        .members h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .members p.subtitle {
+            color: var(--text-muted);
+            margin-bottom: 4rem;
+        }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            background-color: var(--surface-dark);
+            border: 1px solid #333;
+            overflow: hidden;
+            border-radius: 4px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-red);
+        }
+
+        .member-img {
+            width: 100%;
+            height: 350px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-info h3 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background-color: var(--surface-dark);
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ENHYPEN</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#members">Members</a>
+            <a href="#music">Music</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>ENHYPEN</h1>
+        <p>Jungwon, Heeseung, Jay, Jake, Sunghoon, Sunoo, Ni-ki. Connecting, discovering, and growing together.</p>
+        <a href="#music" class="btn-primary">Listen to Latest Album</a>
+    </section>
+
+    <section id="members" class="members">
+        <h2>The Members</h2>
+        <p class="subtitle">Meet the seven members of ENHYPEN</p>
+        
+        <div class="member-grid">
+            <div class="member-card">
+                <div class="member-img">[Image Placeholder: Jungwon]</div>
+                <div class="member-info"><h3>Jungwon</h3></div>
+            </div>
+            <div class="member-card">
+                <div class="member-img">[Image Placeholder: Heeseung]</div>
+                <div class="member-info"><h3>Heeseung</h3></div>
+            </div>
+            <div class="member-card">
+                <div class="member-img">[Image Placeholder: Jay]</div>
+                <div class="member-info"><h3>Jay</h3></div>
+            </div>
+            <div class="member-card">
+                <div class="member-img">[Image Placeholder: Jake]</div>
+                <div class="member-info"><h3>Jake</h3></div>
+            </div>
+            <div class="member-card">
+                <div class="member-img">[Image Placeholder: Sunghoon]</div>
+                <div class="member-info"><h3>Sunghoon</h3></div>
+            </div>
+            <div class="member-card">
+                <div class="member-img">[Image Placeholder: Sunoo]</div>
+                <div class="member-info"><h3>Sunoo</h3></div>
+            </div>
+            <div class="member-card">
+                <div class="member-img">[Image Placeholder: Ni-ki]</div>
+                <div class="member-info"><h3>Ni-ki</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fan Page. Not affiliated with BELIFT LAB.</p>
+    </footer>
+
+</body>
+</html>
